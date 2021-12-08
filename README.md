@@ -1,0 +1,2 @@
+# SolentialKanboard
+Solential Kanboard Plugin
