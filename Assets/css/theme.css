@@ -320,6 +320,29 @@ table.table-fixed th, table.table-fixed td {
     opacity: 0.5;
 }
 
+.task-board-title {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.task-board-category-container {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.task-tags {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.task-board-icons {
+    margin-top: 1px;
+}
+
+.task-board-icons .task-board-icons-row {
+    line-height: 15px;
+}
+
 /*@media (max-width: 768px) {
     .sidebar {
         max-width: 100%;
