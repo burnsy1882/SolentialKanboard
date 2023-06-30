@@ -3,6 +3,8 @@
 namespace Kanboard\Plugin\Solential;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Plugin\Solential\Action\ReorderEveryColumnAction;
+use Kanboard\Plugin\Solential\Action\RemoveTaskDueDateAction;
 
 class Plugin extends Base
 {
@@ -33,6 +35,9 @@ class Plugin extends Base
 
         $this->hook->on("template:layout:css", array("template" => "plugins/Solential/Assets/css/theme.css"));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Solential/Assets/js/theme.js'));
+
+        $this->actionManager->register(new ReorderEveryColumnAction($this->container));
+        $this->actionManager->register(new RemoveTaskDueDateAction($this->container));
     }
 
     public function getPluginName()
