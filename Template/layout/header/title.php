@@ -1,6 +1,6 @@
 <?php global $themeSolentialConfig; ?>
     <span class="logo">
-        <?= $this->url->link('<img src="'.$themeSolentialConfig['logo'].'" style="float: left; max-height: 40px; margin-top: -5px; margin-right: 10px;" />', 'DashboardController', 'show', array(), false, '', t('Dashboard')) ?>
+        <?= $this->url->link('<img src="'.$themeSolentialConfig['logo'].'" style="float: left; max-height: 40px; margin-right: 10px;" />', 'DashboardController', 'show', array(), false, '', t('Dashboard')) ?>
     </span>
     <h1>
         <span class="title">

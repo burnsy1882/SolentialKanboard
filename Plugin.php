@@ -17,21 +17,9 @@ class Plugin extends Base
             require_once('plugins/Solential/config.php');
         }
 
-        if (file_exists('plugins/Customizer'))
-        {
-            $this->template->setTemplateOverride('header/title', 'Solential:layout/header/customizerTitle');
-            $this->template->setTemplateOverride('layout', 'Solential:layout');
-        }
-        elseif (isset($themeSolentialConfig['logo']))
-        {
-            $this->template->setTemplateOverride('header/title', 'Solential:layout/header/title');
-            $this->template->setTemplateOverride('board/table_tasks', 'Solential:layout/board/table_tasks');
-            $this->template->setTemplateOverride('layout', 'Solential:layout');
-        }
-        else
-        {
-            $this->template->setTemplateOverride('layout', 'Solential:layout');
-        }
+        $this->template->setTemplateOverride('header/title', 'Solential:layout/header/title');
+        $this->template->setTemplateOverride('board/table_tasks', 'Solential:layout/board/table_tasks');
+        $this->template->hook->attach('template:auth:login-form:before', 'Solential:layout/auth/index');
 
         $this->hook->on("template:layout:css", array("template" => "plugins/Solential/Assets/css/theme.css"));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Solential/Assets/js/theme.js'));
@@ -47,7 +35,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('Solential Theme');
+        return t('Solential theme and plugins');
     }
 
     public function getPluginAuthor()
@@ -57,11 +45,12 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.0.0';
+        return '1.1.0';
     }
+
     public function getCompatibleVersion()
     {
-        return '>=1.0.0';
+        return '>=1.2.30';
     }
 
     public function getPluginHomepage()
