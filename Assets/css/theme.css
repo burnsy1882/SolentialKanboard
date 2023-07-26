@@ -2,6 +2,8 @@
  * Theme for Kanboard
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
     color: #868ba1;
     background-color: #ffffff;
@@ -126,6 +128,22 @@ input[type="number"], input[type="date"], input[type="email"], input[type="passw
     line-height: 1.25;
     padding: 0.65rem 0.75rem;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+#form-priority option[value="0"] {
+    background-color: rgb(238,238,238);
+}
+
+#form-priority option[value="1"] {
+    background-color: rgb(189,244,203);
+}
+
+#form-priority option[value="2"] {
+    background-color: rgb(245,247,196);
+}
+
+#form-priority option[value="3"] {
+    background-color: rgb(255,187,187);
 }
 
 .select-dropdown-input {
