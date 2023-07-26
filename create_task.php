@@ -44,6 +44,8 @@ if (isset($_POST['title']))
         <script type="text/javascript" src="/assets/js/vendor.min.js"></script>
         <script type="text/javascript" src="/assets/js/app.min.js"></script>
 
+        <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
         <title>Kanboard Quick Add Task</title>
     </head>
     <body>
