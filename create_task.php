@@ -53,7 +53,7 @@ if (isset($_POST['title']))
             <div class="title-container">
                 <h1>
                     <span class="logo">
-                        <a href="">K<span>B</span></a>
+                        <a href="/">K<span>B</span></a>
                     </span>
                     <span class="title">
                         Kanboard Quick Add Task
@@ -65,7 +65,7 @@ if (isset($_POST['title']))
             <?php
                 if (isset($result))
                 {
-                    print('<div class="alert alert-success alert-fade-out">Added task successfully.</div>');
+                    print('<div class="alert alert-success">Added task successfully.</div>');
                 }
                 if (isset($exception))
                 {
